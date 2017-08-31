@@ -69,5 +69,5 @@ RUN set -ex ;\
 # startup configuration
 USER matrix
 VOLUME ["/data", "/config", "/riot/config"]
-CMD ["/usr/bin/python", "-B", "-m", "synapse.app.homeserver", "-c", "/config/homeserver.yaml"]
+CMD ["/usr/bin/python", "-B", "-m", "synapse.app.homeserver", "-c", "/config/homeserver.yaml", "--generate-config"]
 EXPOSE 8008 8448
